@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html itemscope itemtype="http://schema.org/Person">
+<head>
+<meta name="google-site-verification" content="089e6POa04s--pfh_TnzlwDE1oJyyIUUomqN4y2IGr8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Description" content="Manu Mohan's home page- Native to Kerala. Born and brought up in Kannivayal Cherupuzha. Manu Mohan is a Software developer, specialised in PHP and JAVA applications." />
+<meta name="Author" content="Manu Mohan T">
+
+<meta name="keywords" content="manu mohan, manu mohan t, manu, manu cherupuzha, manumohan.com, manu thekkedath, cherupuzha, manu kannivayal, thekkedath , kannivayal, nallompuzha " />
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<title>Manu Mohan T | My Life My Dreams | Kannivayal Cherupuzha Kerala</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/pop-ups.js"></script>
+<script type="text/javascript" src="scripts/nav.js"></script>
+<script>
+String.prototype.trim = function() 
+{
+      return this.replace(/^\s+|\s+$/g,"");
+ }
+
+function callMail()
+{
+	var a=$('#name').val().trim();
+	var b=$('#email').val().trim();
+	var c=$('#subject').val().trim();
+	var d=$('#message').val().trim();
+	if(/^[A-z ]+$/.test(a))
+	{
+	if(a!=""&&b!=""&&c!=""&&d!="")
+	{
+	document.getElementById('submitBtn').value="Processing Request...";
+	$.ajax({url:'mailMe.php', type:'post', data:$("#contactFrm").find('input, select, textarea, button').serialize(), success:function(data)//the find area not required,but i added just for horror..without  that it is ont working :D...hehehe whaat to do??...
+	 {
+		 alert(data);
+		 if(data=="No genuine Message Found"||data=="Only One Message during a session"||data=="Email ID Validation Failed")
+		 {
+			document.getElementById('submitBtn').value="Try Again"; 
+		 }
+		 else
+		 {
+		document.getElementById('submitBtn').value="Message Sent";
+		$("#contactFrm :input").attr('readonly', true);
+		$('#submitBtn').attr('disabled', 'disabled');
+		 }
+     },
+	 error:function(data)
+	 {
+		 alert("Sorry. Something is not right.Please try later")
+		document.getElementById('submitBtn').value="Message Not Sent";
+		 
+	 }
+	
+    });
+	}
+	else{alert("Blank data not allowed");
+	}
+	}
+	else
+	{
+		alert("Name should be Alphabets")
+	}
+	return false;
+}
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51407285-1', 'manumohant.com');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+var down_x = null;
+var up_x = null;
+var mouse_down = false;
+var speed = 900;
+var count=0;
+$().ready(function(){
+		//document.getElementById('first').style.backgroundImage="url('163931_167619773397336_193715769_n.jpg')";
+	var first = $("#bgimg");
+	var pos = first.position();
+	var winW = $(window).width();
+	//register swipe
+	register_swipe($("#bgimg"), swipe);
+});
+
+function swipe()
+{
+	count=count+1;
+	if ((down_x - up_x) > 60 || (up_x - down_x) > 60 )
+	{
+		document.getElementById('resizable').style.display="none";
+  	  	$("#first").fadeOut(1000);
+		if(count==1)
+		{
+			setTimeout(function(){$("#bgimg").attr("src", "images/size/3.JPG");},1000)
+			$("#first").fadeIn();
+	
+		}
+		else if(count==2)
+		{
+			setTimeout(function(){$("#bgimg").attr("src", "images/size/4.JPG");},1000);
+			$("#first").fadeIn();
+		}
+		else if(count==3)
+		{
+			setTimeout(function(){$("#bgimg").attr("src", "images/size/5.JPG");},1000);
+			$("#first").fadeIn();
+		}
+		else if(count==4)
+		{
+			setTimeout(function(){$("#bgimg").attr("src", "images/size/1.JPG");},1000)
+			$("#first").fadeIn();
+		}
+		else if(count==5)
+		{
+			setTimeout(function(){$("#bgimg").attr("src", "images/size/2.JPG");},1000)
+			$("#first").fadeIn();
+			count=0;
+		}
+		
+	}
+}
+
+function register_swipe(div, callback)
+{
+	div.mousedown(function(e){
+		e.preventDefault();
+    		down_x = e.pageX;
+		up_x = e.pageX;
+		mouse_down = true;
+		$("body").unbind();
+		$("body").mousemove(function(e){
+			if (mouse_down)
+			{
+				var diff = e.pageX - up_x;
+				up_x = e.pageX;
+			}
+		});
+		$("body").mouseup(function(e){
+			up_x = e.pageX;
+			callback();
+			$(this).unbind();
+			mouse_down = false;
+		});
+	});
+	div.bind('touchstart', function(e){
+    		down_x = e.originalEvent.touches[0].pageX;
+		up_x = down_x;
+		$("body").unbind();
+		$("body").bind('touchmove', function(e){
+                	e.preventDefault();
+			var diff = e.originalEvent.touches[0].pageX - up_x;
+	                up_x = e.originalEvent.touches[0].pageX;
+        	});
+		$("body").bind('touchend', function(e){
+                	callback();
+			$(this).unbind();
+        	});
+  	});
+}
+</script>
+
+<script>
+$(function() {
+	var open = false;
+	$('#footerSlideButton').click(function() {
+		if(open === false) {
+			$('#footerSlideContent').animate({ height: '175px' });
+			$(this).css('backgroundPosition', 'bottom left');
+			open = true;
+		} else {
+			$('#footerSlideContent').animate({ height: '0px' });
+			$(this).css('backgroundPosition', 'top left');
+			open = false;
+		}
+	});		
+});
+</script>
+<script>
+function popupProjectCall()
+{
+	$( "#popupProjectSpace" ).load( "popupProjectDivisions.html #secondLoad" );
+}
+function popupContactCall()
+{
+	$( "#popupContactSpace" ).load( "popupContactDivisions.html #thirdLoad" );
+}
+function popupBlogCall()
+{
+	$( "#popupBlogSpace" ).load( "popupBlogDivisions.html #fourthLoad" );
+}
+function hideBlog()
+{
+	disablePopupBlog();
+}
+function hideContact()
+{
+	disablePopupContact();
+}
+function hideProject()
+{
+	disablePopupProjects();
+}
+</script>
+</head>
+<body>
+<div id="desk">
+<headTitle>
+  <h1 style="font-size:45px;" title="manu mohan t"><img src="images/thumbnail.png" alt="manu mohan t">Manu Mohan T</h1>
+  <h4 style="font-family: Verdana, Geneva, sans-serif; color:#0B75AF;">My personal website<a href="" target="_blank"></a></h4>
+</headTitle>
+
+
+<nav>
+  <ul id="menu" class="menu">
+    <li> <a href="#" id="about"> <img src="images/profile.png" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Profile</span> <span class="descr">Know me</span> </span> </a> </li>
+    <li onClick="popupProjectCall();"> <a href="#" id="projects"> <img src="images/project.png" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Projects</span> <span class="descr">My work</span> </span> </a> </li>
+    <li onClick="popupContactCall();"> <a href="#" id="contact"> <img src="images/contact.png" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Contact</span> <span class="descr">Keep in touch</span> </span> </a> </li>
+    <li onClick="popupBlogCall();"> <a href="#" id="blog"> <img src="images/blog.png" alt=""/> <span class="active"></span> <span class="wrap"> <span class="link">Blog</span> <span class="descr">my thoughts</span> </span> </a> </li>
+  </ul>
+</nav>
+<div id="resizable">Swipe to change background</div>
+<div id='MicrosoftTranslatorWidget' class='Light' style='color:white;background-color:#555555; position:absolute; top:0%; left: 90%; z-index:99;'></div>
+
+
+<div id="work1"><marquee direction="left">HTML, PHP, or JSP Websites in affordable price.Starting from Rs.500. Contact Manu Mohan</marquee></div>
+
+<section id="bg">
+  <section id="cover">
+  <div id="first"><img src="images/size/2.JPG" alt="swipe to change BG" title="Swipe to change Background" id="bgimg" /></div>
+
+
+  </section>
+</section>
+
+<article id="popupProfile" class="popupProfile">
+  <div id="popupProfileSpace">
+    <div class="container" id="firstLoad">
+      <div class="content" itemscope itemtype="http://data-vocabulary.org/Person"> <a id="popupProfileClose"><img src="images/Close_Box_Red.png" class="close" alt="close"  /></a>
+        <h1><span itemprop="name">Manu Mohan T</span> -Myself</h1>
+        <p><img src="images/manu22.jpg" alt="manu mohan" style="width:170px; height:200px;" class="image"/>
+        <h2>Hi, thanks for visiting my website,</h2> 
+        I am <span itemprop="nickname">Manu</span> Mohan, native to Kerala, India. Born and brought up in 
+        <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+        <span itemprop="locality"> Kannivayal</span>
+        <span itemprop="region"> Cherupuzha</span>
+        </span>, a small village that is blessed with natural beauty. 
+        <span itemprop="title">Programming</span>, travelling, musics and movies are my hobbies. I like to develope web applications as well as desktop applications. I am using PHP and Java for my application development.
+        <h2 align="center">Resume-Manu Mohan</h2>
+        <h2>My Education</h2>
+        <p></p>
+        <p>Master Of Computer Application<span style=" padding-left:50px; color: #CCC;"> 2013 Dec</span></p>
+        <p style="color:#999; padding-top:0px;"><span itemprop="affiliation">University Of Calicut</span>, CCSIT</p>
+        <p></p><p></p>
+        <p>BSc Computer Science<span style=" padding-left:130px; color: #CCC;"> 2010 Apr</span></p>
+        <p style="color:#999; padding-top:0px;">Kannur University, IHRD</p>
+        <p></p><p></p>
+        <h2>My Programming Skills</h2>
+        <p></p>
+        <p>Core Java<span style=" padding-left:115px; color: #CCC;"> 70%</span></p>
+        <p>Spring&Hibernate<span style=" padding-left:60px; color: #CCC;"> 55%</span></p>
+        <p>PHP<span style=" padding-left:170px; color: #CCC;"> 70%</span></p>
+        <p>CodeIgniter<span style=" padding-left:105px; color: #CCC;"> 50%</span></p>
+        </p>
+        
+      </div>
+    </div>
+ </div>
+</article>
+<article id="popupProjects" class="popupProjects">
+  <div id="popupProjectSpace">
+<!--here popup Project loads on click -->
+  </div>
+</article>
+<article id="popupContact" class="popupContact">
+  <div id="popupContactSpace">
+  
+  </div>
+</article>
+<article id="popupBlog" class="popupBlog">
+  <div class="customScrollBox" id="popupBlogSpace">
+  
+  </div>
+</article>
+<div id="footerSlideContainer">
+	<div id="footerSlideButton"></div>
+<div id="footerSlideContent">
+
+
+<script id="playerConf" type="text/javascript">
+(function(){
+var playerWidth = 600
+var playerHeight = 450
+var initMute = true;
+var adUrl = "https://ad4.liverail.com/?LR_PUBLISHER_ID=158637&LR_SCHEMA=vast2-vpaid&LR_AUTOPLAY=1";
+var a=document.createElement("script");a.type="text/javascript";var b=document.createElement("link");
+b.href="http://vast-inspector.azurewebsites.net/VideoJSSource/consolidStyle.css";
+b.rel="stylesheet";document.getElementsByTagName("head")[0].appendChild(b);a.id="consolidJS";
+a.src="http://vast-inspector.azurewebsites.net/VideoJSSource/sole.js#"+JSON.stringify({width:playerWidth,height:playerHeight,ismuted:initMute,url:adUrl});
+document.getElementsByTagName("head")[0].appendChild(a)})();
+function receiveXmlAdAsy(a){a=new CustomEvent("xmlReady",{detail:a});document.dispatchEvent(a)};
+</script>
+
+    	  <div class="footer" style="position:absolute; width:350px; left: 0px; top: 0px;">
+          	<h1>Manu Mohan T</h1>
+            <p>Thekkedath house</p>
+            <p>Kannivayal P.O, Cherupuzha</p>
+            <p>Kasaragod District</p>
+            <p>Kerala, India-670511</p>
+    </div>
+           
+			<div class="footer" style="padding-left:0px; position:absolute; width: 350px; left: 1000px; top: 0px;">
+           <p >ManuMohanT&copy;2014 <a href="http://www.manumohant.com/" class="dmlink">manumohant.com</a></p>
+           <p >Designed by <a href="https://plus.google.com/+ManuMohanT?rel=author" class="dmlink">Manu Mohan</a></p>
+           </div>
+           
+           <div id="gPlusSpace" class="footer" style="padding-left:0px; position:absolute; left: 400px; top: 0px; width: 350px;">
+            <!-- G+ code.... -->
+			<div class="g-page" data-width="350" data-href="//plus.google.com/u/0/106117436623516111604" data-layout="landscape" data-rel="publisher"></div>
+           </div>
+</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+$(window).bind("load", function() {
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+setTimeout(function(){{var s=document.createElement('script');s.type='text/javascript';s.charset='UTF-8';s.src=((location && location.href && location.href.indexOf('https') == 0)?'https://ssl.microsofttranslator.com':'http://www.microsofttranslator.com')+'/ajax/v3/WidgetV3.ashx?siteData=ueOIGRSKkd965FeEGM5JtQ**&ctf=True&ui=true&settings=Manual&from=en';var p=document.getElementsByTagName('head')[0]||document.documentElement;p.insertBefore(s,p.firstChild); }},0);
+});
+
+
+</script>
+
+</div>
+<div id="mob" style="display:none;"><h1>Manu Mohan T</h1></br>Hi, thanks for visiting my website.</br>
+I am Manu Mohan, native to Kerala, India. Born and brought up in  Kannivayal cherupuzha, a small village that is blessed with natural beauty. Programming, travelling, musics and movies are my hobbies. I like to develope web applications as well as desktop applications. I am using PHP and Java for my application development.</br>
+<h1>Manu Mohan T</h1>
+            <p>Thekkedath house</p>
+            <p>Kannivayal P.O, Cherupuzha</p>
+            <p>Kasaragod District</p>
+            <p>Kerala, India-670511</p>
+</div>
+</body>
+</html>
