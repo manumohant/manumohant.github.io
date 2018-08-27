@@ -15,8 +15,21 @@
 	<link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 </head>	
+	
 <body>
+	<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 <div class="content">
 	<div class="logo">
 		<img src="img/manumohant.png" width="230" height="200" border="0" class="avarat img-responsive" alt="manumohant">
@@ -27,7 +40,7 @@
 	<p><strong>I do software development in C#, Java and PHP. </strong></p>
     
 	<ul  class="soc_bar">
-		<li class="fb"><a href='https://www.facebook.com/manumohantkd'target='_blank' title="facebook" alt="manumohant"></a></li>
+		<div class="fb-quote"></div>
         <li class="google"><a href="http://plus.google.com/+manumohant" title="Google" alt="manumohant"></a></li>
 		<li class="skype"><a href="skype:manu.mohan.t?call" title="Skype" alt="manumohant"></a></li>
 		<li class="email"><a href="mailto:manu@manumohant.com" title="Email" alt="manumohant"></a></li>
