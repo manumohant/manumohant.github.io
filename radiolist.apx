@@ -1,0 +1,99 @@
+[
+    {
+        "RadioName": "Club FM",
+        "RadioSource": "https://eu10.fastcast4u.com/clubfmuae",
+        "Description": "Malayalam",
+        "Frequency": "99.6"
+    },
+    {
+        "RadioName": "Radio Mango",
+        "RadioSource": "https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8",
+        "Description": "Malayalam",
+        "Frequency": "91.9"
+    },
+    {
+        "RadioName": "AIR Kannur",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio173/playlist.m3u8",
+        "Description": "Malayalam",
+        "Frequency": "101.5"
+    },
+    {
+        "RadioName": "AIR Malayalam",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8",
+        "Description": "Malayalam",
+        "Frequency": "101.9"
+    },
+    {
+        "RadioName": "AIR Hindi",
+        "RadioSource": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio002_Auto.m3u8",
+        "Description": "Hindi",
+        "Frequency": "101.5"
+    },
+    {
+        "RadioName": "Radio 104.2 FM",
+        "RadioSource": "https://stream-66.zeno.fm/x7mve2vt01zuv?zs=3FHBzf-HTh6A9Lgj8hDJ0Q",
+        "Description": "Malayalam",
+        "Frequency": "104.2"
+    },
+    {
+        "RadioName": "Vividh Bharathi",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/chunklist.m3u8",
+        "Description": "Hindi+",
+        "Frequency": "101.5"
+    },
+    {
+        "RadioName": "Kodai FM AIR Tamil 100.5",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/master.m3u8",
+        "Description": "Tamil"
+    },
+    {
+        "RadioName": "Hello FM Chennai",
+        "RadioSource": "https://strw3.openstream.co/606",
+        "Description": "Tamil"
+    },
+    {
+        "RadioName": "Trichy FM Rainbow",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio040/chunklist.m3u8",
+        "Description": "Tamil"
+    },
+    {
+        "RadioName": "Radio City Tamil",
+        "RadioSource": "https://www.liveradio.es/http://tamil.crabdance.com:8002/5",
+        "Description": "Tamil"
+    },
+    {
+        "RadioName": "Radio Mirchi Tamil",
+        "RadioSource": "https://listen.openstream.co/4543/audio",
+        "Description": "Tamil"
+    },
+    {
+        "RadioName": "Radio Lemon Live Bengaluru",
+        "RadioSource": "https://stream-50.zeno.fm/2qnbwwr7508uv?zs=Jup0ozjIQ2mj8l8fl_aGQg",
+        "Description": "Malayalam"
+    },
+    {
+        "RadioName": "Radio City Kannada",
+        "RadioSource": "https://stream-60.zeno.fm/m3q5v4dvyc9uv?zs=zS43dfu4RBmC6YkrTFPpdQ",
+        "Description": "Kannada"
+    },
+    {
+        "RadioName": "BIG FM 92.7",
+        "RadioSource": "https://radioindia.net/radio/sc-bb/icecast.audio",
+        "Description": "Hindi"
+    },
+    {
+        "RadioName": "AIR Telugu",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8",
+        "Description": "Telugu"
+    },
+    {
+        "RadioName": "AP9 FM Telugu",
+        "RadioSource": "https://stream.ap9fm.in/radio/8000/radio.mp3",
+        "Description": "Telugu"
+    },
+    {
+        "RadioName": "AIR Bangla",
+        "RadioSource": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio137/hlspbaudio13764kbps.m3u8",
+        "Description": "Bangla"
+    }
+]
