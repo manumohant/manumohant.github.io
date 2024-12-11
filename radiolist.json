@@ -24,22 +24,15 @@
         "Frequency": "101.9"
     },
     {
-        "RadioName": "AIR Hindi",
-        "RadioSource": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio002_Auto.m3u8",
-        "Description": "Hindi",
-        "Frequency": "101.5"
-    },
-    {
         "RadioName": "Radio 104.2 FM",
         "RadioSource": "https://stream-66.zeno.fm/x7mve2vt01zuv?zs=3FHBzf-HTh6A9Lgj8hDJ0Q",
         "Description": "Malayalam",
         "Frequency": "104.2"
     },
     {
-        "RadioName": "Vividh Bharathi",
-        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/chunklist.m3u8",
-        "Description": "Hindi+",
-        "Frequency": "101.5"
+        "RadioName": "Radio Lemon Live Bengaluru",
+        "RadioSource": "https://stream-50.zeno.fm/2qnbwwr7508uv?zs=Jup0ozjIQ2mj8l8fl_aGQg",
+        "Description": "Malayalam"
     },
     {
         "RadioName": "Kodai FM AIR Tamil 100.5",
@@ -67,19 +60,31 @@
         "Description": "Tamil"
     },
     {
-        "RadioName": "Radio Lemon Live Bengaluru",
-        "RadioSource": "https://stream-50.zeno.fm/2qnbwwr7508uv?zs=Jup0ozjIQ2mj8l8fl_aGQg",
-        "Description": "Malayalam"
+        "RadioName": "AIR Hindi",
+        "RadioSource": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio002_Auto.m3u8",
+        "Description": "Hindi",
+        "Frequency": "101.5"
     },
     {
-        "RadioName": "Radio City Kannada",
-        "RadioSource": "https://stream-60.zeno.fm/m3q5v4dvyc9uv?zs=zS43dfu4RBmC6YkrTFPpdQ",
-        "Description": "Kannada"
+        "RadioName": "Vividh Bharathi",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/chunklist.m3u8",
+        "Description": "Hindi+",
+        "Frequency": "101.5"
     },
     {
         "RadioName": "BIG FM 92.7",
         "RadioSource": "https://stream-14.zeno.fm/r2gn1pgm4qruv?zs=8uo3M7nTREOFZAsdbFEJ-A",
         "Description": "Hindi"
+    },
+    {
+        "RadioName": "Radion Mirchi 98.3",
+        "RadioSource": "https://playerservices.streamtheworld.com/api/livestream-redirect/NJS_HIN_ESTAAC.m3u8",
+        "Description": "Hindi"
+    },
+    {
+        "RadioName": "Radio City Kannada",
+        "RadioSource": "https://stream-60.zeno.fm/m3q5v4dvyc9uv?zs=zS43dfu4RBmC6YkrTFPpdQ",
+        "Description": "Kannada"
     },
     {
         "RadioName": "AIR Telugu",
