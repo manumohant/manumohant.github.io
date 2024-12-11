@@ -33,6 +33,12 @@
         "RadioName": "Radio Lemon Live Bengaluru",
         "RadioSource": "https://stream-50.zeno.fm/2qnbwwr7508uv?zs=Jup0ozjIQ2mj8l8fl_aGQg",
         "Description": "Malayalam"
+    },    
+    {
+        "RadioName": "Vividh Bharathi",
+        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/chunklist.m3u8",
+        "Description": "Hindi+",
+        "Frequency": "101.5"
     },
     {
         "RadioName": "Kodai FM AIR Tamil 100.5",
@@ -63,12 +69,6 @@
         "RadioName": "AIR Hindi",
         "RadioSource": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio002_Auto.m3u8",
         "Description": "Hindi",
-        "Frequency": "101.5"
-    },
-    {
-        "RadioName": "Vividh Bharathi",
-        "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/chunklist.m3u8",
-        "Description": "Hindi+",
         "Frequency": "101.5"
     },
     {
