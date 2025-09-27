@@ -1,15 +1,15 @@
 [
     {
-        "RadioName": "Club FM",
-        "RadioSource": "https://eu10.fastcast4u.com/clubfmuae",
-        "Description": "Malayalam",
-        "Frequency": "99.6"
-    },
-    {
         "RadioName": "Radio Mango",
         "RadioSource": "https://listen.openstream.co/4635/audio",
         "Description": "Malayalam",
         "Frequency": "91.9"
+    },
+    {
+        "RadioName": "Radio Keralam",
+        "RadioSource": "https://ice31.securenetsystems.net/RADIOKERAL",
+        "Description": "Malayalam",
+        "Frequency": "1476 AM"
     },
     {
         "RadioName": "AIR Kannur",
@@ -22,6 +22,12 @@
         "RadioSource": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8",
         "Description": "Malayalam",
         "Frequency": "101.9"
+    },
+    {
+        "RadioName": "Club FM",
+        "RadioSource": "https://eu10.fastcast4u.com/clubfmuae",
+        "Description": "Malayalam",
+        "Frequency": "99.6"
     },
     {
         "RadioName": "Radio 104.2 FM",
