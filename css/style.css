@@ -187,10 +187,6 @@ h1 { margin: 0; font-size: clamp(58px, 6.7vw, 100px); font-weight: 650; letter-s
 .button-secondary { border-color: #3a5142; color: #d8e3d8; }
 .button-secondary:hover { border-color: #a4ca9e; background: rgba(193, 233, 147, .06); }
 .button-secondary span { color: var(--accent); }
-.products-link { display: inline-flex; align-items: center; gap: 11px; margin-top: 30px; color: #dce8d9; font-size: 13px; font-weight: 600; }
-.products-link > span:last-child { color: var(--accent); transition: transform .25s ease; }
-.products-link:hover > span:last-child { transform: translateX(5px); }
-
 .visual { position: relative; display: grid; place-items: center; width: min(100%, 590px); aspect-ratio: 1; justify-self: end; }
 .visual-glow { position: absolute; inset: 14%; border-radius: 50%; background: #4a8761; filter: blur(85px); opacity: .2; }
 .orbit { position: absolute; border: 1px solid rgba(176, 217, 168, .18); border-radius: 50%; transition: transform .35s ease-out; }
