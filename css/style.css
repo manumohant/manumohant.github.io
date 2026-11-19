@@ -244,6 +244,13 @@ h1 { margin: 0; font-size: clamp(58px, 6.7vw, 100px); font-weight: 650; letter-s
 .store-links a:hover { border-color: var(--accent); background: rgba(193, 233, 147, .08); }
 .store-links a span { color: var(--accent); }
 
+@media (min-width: 501px) {
+  .actions { flex-wrap: nowrap; }
+}
+@media (min-width: 901px) and (max-width: 1000px) {
+  .actions { gap: 10px; }
+  .actions .button { gap: 18px; padding: 0 18px; }
+}
 @media (max-width: 900px) {
   .site-shell { width: min(100% - 64px, 700px); }
   .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 16px; }
