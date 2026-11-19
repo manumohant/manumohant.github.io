@@ -1,0 +1,23 @@
+<html>
+<head>
+</head>
+<body>
+
+<div>
+<script id="playerConf" type="text/javascript">
+(function(){
+var playerWidth = 600
+var playerHeight = 450
+var initMute = true;
+var adUrl = "https://ad4.liverail.com/?LR_PUBLISHER_ID=158637&LR_SCHEMA=vast2-vpaid&LR_AUTOPLAY=1";
+var a=document.createElement("script");a.type="text/javascript";var b=document.createElement("link");
+b.href="http://vast-inspector.azurewebsites.net/VideoJSSource/consolidStyle.css";
+b.rel="stylesheet";document.getElementsByTagName("head")[0].appendChild(b);a.id="consolidJS";
+a.src="http://vast-inspector.azurewebsites.net/VideoJSSource/sole.js#"+JSON.stringify({width:playerWidth,height:playerHeight,ismuted:initMute,url:adUrl});
+document.getElementsByTagName("head")[0].appendChild(a)})();
+
+</script>
+
+</div>
+        </body>
+        </html>

@@ -1,4 +1,4 @@
 User-agent: *
- Disallow:
- Allow: /
- Sitemap: http://sijothomas.com/sitemap.xml
+Allow: /
+
+Sitemap: https://manumohant.github.io/sitemap.xml
