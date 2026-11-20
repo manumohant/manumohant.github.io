@@ -185,8 +185,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding: 38px 0; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand-mark { font-size: 32px; font-weight: 800; letter-spacing: -3px; line-height: 1; }
-.brand-mark span { color: var(--accent); }
+.brand-mark { display: block; width: 42px; height: 42px; flex: 0 0 auto; }
 .brand-name, .header-link, .eyebrow, .footer-note, .visual-index {
   font-size: 10px;
   font-weight: 700;
