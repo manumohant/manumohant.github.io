@@ -98,6 +98,37 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 }
 .shooting-star-one { top: 12%; right: 12%; }
 .shooting-star-two { top: 8%; left: 55%; animation-duration: 47s; animation-delay: 21s; }
+.sagittarius {
+  position: absolute;
+  top: 14%;
+  right: 2%;
+  width: clamp(100px, 13vw, 180px);
+  aspect-ratio: 16 / 11;
+  animation: constellation-drift 240s linear infinite alternate;
+}
+.sagittarius span {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  box-shadow: 0 0 3px 1px rgba(197, 220, 255, .8), 0 0 8px 2px rgba(168, 201, 255, .35);
+  animation: constellation-twinkle 2.8s ease-in-out infinite alternate;
+}
+.sagittarius span:nth-child(3n + 2) { animation-duration: 3.7s; animation-delay: -1.4s; }
+.sagittarius span:nth-child(3n) { animation-duration: 2.1s; animation-delay: -.8s; }
+.sagittarius span:nth-child(1) { left: 7.5%; top: 48.2%; }
+.sagittarius span:nth-child(2) { left: 20.6%; top: 44.5%; width: 4px; height: 4px; }
+.sagittarius span:nth-child(3) { left: 31.9%; top: 21.8%; }
+.sagittarius span:nth-child(4) { left: 45%; top: 39.1%; }
+.sagittarius span:nth-child(5) { left: 63.8%; top: 35.5%; }
+.sagittarius span:nth-child(6) { left: 74.4%; top: 46.4%; }
+.sagittarius span:nth-child(7) { left: 86.3%; top: 39.1%; width: 2px; height: 2px; }
+.sagittarius span:nth-child(8) { left: 84.4%; top: 61.8%; }
+.sagittarius span:nth-child(9) { left: 65%; top: 63.6%; width: 4px; height: 4px; }
+.sagittarius span:nth-child(10) { left: 43.8%; top: 66.4%; }
+.sagittarius span:nth-child(11) { left: 23.8%; top: 61.8%; }
+@keyframes constellation-twinkle { from { opacity: .25; } to { opacity: 1; } }
 @keyframes shooting-star {
   0% { opacity: 0; transform: translate(0, 0) rotate(-35deg); }
   1% { opacity: .85; }
@@ -115,20 +146,23 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 }
 .moon, .orbit-star { position: absolute; border-radius: 50%; }
 .moon {
-  top: 0;
-  left: 50%;
+  top: 10%;
+  left: 10%;
   width: calc(clamp(48px, 6vw, 80px) * var(--moon-scale, 1));
   aspect-ratio: 1;
   /* Moon photograph: NASA, Apollo 17 (AS17-152-23311). */
   background: url("../img/moon.png") center / contain no-repeat;
   filter: drop-shadow(0 0 15px rgba(206, 229, 230, .32));
   opacity: .88;
+  animation: moon-drift 240s linear infinite alternate;
 }
 .orbit-star { width: 4px; height: 4px; background: #e8f4dd; box-shadow: 0 0 12px 3px rgba(218, 241, 202, .4); animation: starlight 2.5s ease-in-out infinite; }
 .orbit-star-one { top: 30%; right: 3%; }
 .orbit-star-two { bottom: 8%; left: 22%; animation-delay: 1.25s; }
 @keyframes starlight { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
 @keyframes sky-rotation { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes moon-drift { from { transform: translate(0, 0); } to { transform: translate(60vw, 55vh); } }
+@keyframes constellation-drift { from { transform: translate(0, 0); } to { transform: translate(-60vw, 55vh); } }
 
 .page-glow, .page-grid { position: fixed; inset: 0; pointer-events: none; }
 .page-glow {
