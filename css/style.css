@@ -104,7 +104,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
   right: 2%;
   width: clamp(100px, 13vw, 180px);
   aspect-ratio: 16 / 11;
-  animation: constellation-drift 240s linear infinite alternate;
+  animation: moon-drift 240s linear infinite alternate;
 }
 .sagittarius span {
   position: absolute;
@@ -162,7 +162,6 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
 @keyframes starlight { 0%, 100% { opacity: .15; } 50% { opacity: 1; } }
 @keyframes sky-rotation { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 @keyframes moon-drift { from { transform: translate(0, 0); } to { transform: translate(60vw, 55vh); } }
-@keyframes constellation-drift { from { transform: translate(0, 0); } to { transform: translate(-60vw, 55vh); } }
 
 .page-glow, .page-grid { position: fixed; inset: 0; pointer-events: none; }
 .page-glow {
